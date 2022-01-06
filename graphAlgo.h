@@ -28,7 +28,7 @@ pnode build_graph_cmd(int num_of_nodes);
 
 pnode getNode(int id, pnode *head);
 
-void insert_node_funcA_cmd(pnode *head, int src);
+void insertNodeA(pnode *head, int src);
 
 void add_edge(pnode temp, int dest, int w, pnode *head);
 
