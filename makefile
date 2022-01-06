@@ -6,12 +6,11 @@ all: graph
 libgraphAlgo.a: graphAlgo.o nodes.o edges.o
 	$(AR) -rcs libgraphAlgo.a graphAlgo.o nodes.o edges.o
 
-
-nodes.o: nodes.c nodes.h
+nodes.o: nodes.c graphAlgo.h
 	$(CC) $(FLAGS) -c nodes.c
-edges.o: edges.c edges.h nodes.h
+edges.o: edges.c graphAlgo.h
 	$(CC) $(FLAGS) -c edges.c
-graphAlgo.o: graphAlgo.c graphAlgo.h nodes.h edges.h
+graphAlgo.o: graphAlgo.c graphAlgo.h
 	$(CC) $(FLAGS) -c graphAlgo.c
 main.o: main.c graphAlgo.h
 	$(CC) $(FLAGS) -c main.c
